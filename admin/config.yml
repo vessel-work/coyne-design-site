@@ -5,7 +5,7 @@ backend:
 media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
-site_url: "https://YOUR-NETLIFY-SITE.netlify.app"
+site_url: "https://rainbow-mousse-dc53c8.netlify.app/"
 
 collections:
   - name: "products"
