@@ -1,14 +1,58 @@
-**I see the issue** - the `#process` fragment broke the CMS routing. Let's **reset to a stable state** in 3 minutes.
-
-## Emergency Reset - 3 Files Only
-
-### 1) Fix Homepage (`index.html`)
-
-**Delete everything in `index.html`** → replace with **this minimal working version**:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF  
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coyne Design Company</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f3ef;
+      color: #222;
+    }
+    header {
+      padding: 1.5rem 3rem;
+      border-bottom: 1px solid #ddd0c2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      color: #f5f3ef;
+    }
+    .logo {
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    main {
+      padding: 4rem 3rem;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+    p {
+      max-width: 40rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Coyne Design Company</div>
+    <nav>
+      <a href="/admin" style="color:#f5f3ef; text-decoration:none; font-size:0.85rem;">CMS Login</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Custom Live Edge Furniture</h1>
+    <p>
+      This is a temporary homepage just to confirm the site is working cleanly.
+      Once this is stable, we’ll paste in your full luxury layout.
+    </p>
+  </main>
+</body>
+</html>
