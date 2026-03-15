@@ -1,35 +1,58 @@
-<!doctype html>
-<html data-theme="light">
-  <head>
-    <meta charset="utf-8">
-    <title>Coyne Design Company</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/styles.css">
-  </head>
-  <body>
-    <header class="nav">
-      <div class="logo">Coyne Design</div>
-      <button class="theme-toggle" data-theme-toggle>◐</button>
-    </header>
-
-    <main>
-      <section class="hero">
-        <h1>Custom Live Edge Furniture</h1>
-        <p>Handcrafted, bespoke pieces for modern spaces.</p>
-      </section>
-    </main>
-
-    <script src="assets/js/theme.js"></script>
-  </body>
-</html>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Content Manager</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coyne Design Company</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f3ef;
+      color: #222;
+    }
+    header {
+      padding: 1.5rem 3rem;
+      border-bottom: 1px solid #ddd0c2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      color: #f5f3ef;
+    }
+    .logo {
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    main {
+      padding: 4rem 3rem;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+    p {
+      max-width: 40rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="logo">Coyne Design Company</div>
+    <nav>
+      <a href="/admin" style="color:#f5f3ef; text-decoration:none; font-size:0.85rem;">CMS Login</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Custom Live Edge Furniture</h1>
+    <p>
+      This is a temporary homepage just to confirm the site is working cleanly.
+      Once this is stable, we’ll paste in your full luxury layout.
+    </p>
+  </main>
 </body>
 </html>
