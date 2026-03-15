@@ -1,62 +1,125 @@
 <!doctype html>
-<html>
+<html data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Content Manager</title>
-  <script>window.CMS_MANUAL_INIT = true;</script>
+  <meta charset="utf-8">
+  <title>Coyne Design Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bespoke live edge furniture, handcrafted conference tables, custom wood slabs. Ventura County, Los Angeles.">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    window.CMS.init({
-      backend: {
-        name: "git-gateway",
-        branch: "main"
-      },
-      media_folder: "assets/uploads",
-      public_folder: "/assets/uploads",
-      site_url: "https://rainbow-mousse-dc53c8.netlify.app",
-      collections: [
-        {
-          name: "products",
-          label: "Products",
-          folder: "content/products",
-          create: true,
-          slug: "{{slug}}",
-          fields: [
-            { label: "Name", name: "name", widget: "string" },
-            { label: "Hero Image", name: "hero", widget: "image" },
-            { label: "Description", name: "description", widget: "text" }
-          ]
-        },
-        {
-          name: "projects",
-          label: "Projects", 
-          folder: "content/projects",
-          create: true,
-          slug: "{{slug}}",
-          fields: [
-            { label: "Title", name: "title", widget: "string" },
-            { label: "Cover Image", name: "cover", widget: "image" },
-            { label: "Body", name: "body", widget: "markdown" }
-          ]
-        },
-        {
-          name: "home",
-          label: "Homepage",
-          file: "content/home.md",
-          fields: [
-            { label: "Hero Title", name: "hero_title", widget: "string" },
-            { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" },
-            { label: "Process Title", name: "process_title", widget: "string" },
-            { label: "Process Step 1", name: "process_step_1", widget: "string" },
-            { label: "Process Step 2", name: "process_step_2", widget: "string" },
-            { label: "Process Step 3", name: "process_step_3", widget: "string" }
-          ]
-        }
-      ]
-    });
-  </script>
+  <header class="nav">
+    <div class="logo">Coyne Design</div>
+    <nav>
+      <a href="#process">Process</a>
+      <a href="#collections">Collections</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="contact.html">Request Quote</a>
+    </nav>
+    <button class="theme-toggle" data-theme-toggle>☀️</button>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- This will eventually pull from CMS home.md hero_title/subtitle -->
+      <div class="hero-content">
+        <h1>Bespoke Live Edge Furniture</h1>
+        <p>Handcrafted one-of-a-kind pieces for modern spaces. Ventura County, Los Angeles.</p>
+        <a href="contact.html" class="cta">Request Custom Quote</a>
+      </div>
+      <!-- Your existing high-res slab images go here -->
+      <div class="hero-image">
+        <!-- Placeholder - replace with CMS hero image -->
+        <div class="hero-placeholder" style="background: linear-gradient(135deg, #8B4513 0%, #654321 100%);">
+          <span>Large slab hero image<br>from existing site</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section (CMS-driven) -->
+    <section id="process" class="process">
+      <div class="container">
+        <h2>Our Craftsmanship Process</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <h3>Discover</h3>
+            <p>Source rare live edge slabs from sustainable forests.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">02</div>
+            <h3>Design</h3>
+            <p>Collaborate on your vision with our design team.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">03</div>
+            <h3>Craft</h3>
+            <p>Handcraft with CNC precision and artisan finish.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">04</div>
+            <h3>Deliver</h3>
+            <p>Install your heirloom piece, lifetime warranty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Collections -->
+    <section id="collections" class="collections">
+      <div class="container">
+        <h2>Featured Collections</h2>
+        <div class="collection-grid">
+          <!-- CMS Products will populate here -->
+          <div class="collection-card">
+            <div class="card-image" style="background: #D2B48C;"></div>
+            <h3>Conference Tables</h3>
+            <p>Bespoke boardroom statements</p>
+            <a href="#" class="configure-link">Configure</a>
+          </div>
+          <div class="collection-card">
+            <div class="card-image" style="background: #A0522D;"></div>
+            <h3>Dining Tables</h3>
+            <p>Heirloom family gatherings</p>
+            <a href="#" class="configure-link">Configure</a>
+          </div>
+          <div class="collection-card">
+            <div class="card-image" style="background: #8B4513;"></div>
+            <h3>Wall Art</h3>
+            <p>Sculptural live edge displays</p>
+            <a href="#" class="configure-link">View</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2>Recent Projects</h2>
+        <div class="portfolio-grid">
+          <!-- CMS Projects will populate here -->
+          <div class="portfolio-item">
+            <div class="portfolio-image" style="background: #654321;"></div>
+            <div class="portfolio-info">
+              <h3>White Oak Conference</h3>
+              <p>Ventura Boardroom</p>
+            </div>
+          </div>
+          <div class="portfolio-item">
+            <div class="portfolio-image" style="background: #8B4513;"></div>
+            <div class="portfolio-info">
+              <h3>Live Edge Dining</h3>
+              <p>Manhattan Beach</p>
+            </div>
+          </div>
+          <!-- More portfolio items -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/theme.js"></script>
 </body>
 </html>
